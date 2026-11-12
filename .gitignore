@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+*.log
+# Secrets : ne jamais publier
+.env
+.env.local
+.env*.local

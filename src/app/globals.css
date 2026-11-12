@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+/* Jetons du design system (DESIGN_SYSTEM.md, section 2). Aucune autre couleur. */
+@theme {
+  --color-fond: #ffffff;
+  --color-rouge: #a90f0f;
+  --color-rouge-survol: #8e0c0c;
+  --color-encre: #1f1f1f;
+  --color-texte: #3d3d3d;
+  --color-gris: #6b6b6b;
+  --color-trait: #e6e6e6;
+  --color-ligne-champ: #bdbdbd;
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-fond);
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-fond);
+  color: var(--color-encre);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Focus visible : contour rouge de 2 px, décalé de 2 px. */
+:focus-visible {
+  outline: 2px solid var(--color-rouge);
+  outline-offset: 2px;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--color-rouge);
+  flex-shrink: 0;
+}
